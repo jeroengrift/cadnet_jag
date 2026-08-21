@@ -1,0 +1,35 @@
+# Editor & OS
+.history/
+.vscode/
+**/.DS_Store
+
+# Python
+__pycache__/
+**/*.pyc
+**/*.so
+
+# Data & outputs
+tests/
+data/
+output/
+output_old/
+outputs/
+exp/
+build/
+targets/
+preds/
+logs/
+config_old/
+cadnet_old/
+
+# Model files
+**/pretrained_models/
+*.ckpt
+
+# Tile configs
+**/tile_configs/
+
+# Misc
+*.out
+run.txt
+

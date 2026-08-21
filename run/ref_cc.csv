@@ -1,0 +1,10 @@
+urban_type,vis_type,ref_feature_connected_components_sum
+urban,all,1797
+_,all,2578
+rural,all,2753
+urban,_vis_,11846
+rural,_vis_,13642
+rural,_inv_,16184
+urban,_inv_,20750
+_,_vis_,23122
+_,_inv_,36058

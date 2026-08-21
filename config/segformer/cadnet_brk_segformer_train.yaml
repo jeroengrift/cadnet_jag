@@ -1,0 +1,39 @@
+SOLVER:
+  IMS_PER_BATCH: 8
+  BASE_LR: 1e-4
+  OPTIMIZER: "ADAM"
+  AMSGRAD: True
+  WEIGHT_DECAY: 0.00001
+  LR_PATIENCE: 2
+  LR_FACTOR: 0.5
+  LR_MIN: 1e-6
+  PATIENCE: 3
+  PATIENCE_MIN_DELTA: 0.001
+  WARMUP_ITERS: 1000
+
+DATALOADER:
+  NUM_WORKERS: 8
+
+DATASETS:
+  DATA_DIR: 'data/nl'
+  BUFFER: .4
+  SELECT_URBAN: True
+  SELECT_RURAL: True
+  DOWNSAMPLE_FACTOR: .32
+  PATCHES_DIR: 'patches_25'
+  REF_FNAME: 'reference_nl_ps_25_brk.gpkg'
+  RESOLUTIONS: [512, 256, 128, 64, 32]
+  REFERENCE_TYPE: 'test'
+
+MODEL:
+  RUN_TYPE: "train"
+  PACKAGE: "models.cadnet.cadnet"
+  CLASS_NAME: "CadNET"
+  BACKBONE: "segformer"
+  DEVICE: "cuda:0"
+  USE_PRETRAINED: False
+  TRAINED_MODEL: 'model_00004.pth'
+  USE_MULTI: False
+  USE_COA: False
+  USE_BRK: True
+  TEST_OVERLAP_50: True
